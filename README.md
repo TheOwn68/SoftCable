@@ -1,62 +1,60 @@
-V1.1.0
-# SoftCable – USB‑C Cable & Port Diagnostic Suite
+# SoftCable  
+A modern USB‑C cable diagnostic suite with a clean CustomTkinter GUI.
 
-SoftCable is a Linux USB‑C diagnostic tool that analyzes:
-
-- USB‑C port capabilities  
-- Power Delivery (PD) voltage, current, and wattage  
-- USB‑C cable identity (e‑marker, speed rating, current rating)  
-- USB drive read/write performance  
-- Cable stability under repeated load  
-- Raw USB/PD sysfs data  
-- Exportable diagnostic reports  
-
-SoftCable uses `/sys/class/typec`, `/sys/class/power_supply`, and USB storage performance tests to reveal real‑world cable and port behavior.
+SoftCable analyzes USB‑C ports, cables, power delivery, data speeds, lane mapping, and cable identity to give you a complete picture of your cable’s capabilities and stability.  
+Version 2.0 introduces a fully redesigned interface with a modern tabbed layout and real‑time power monitoring dashboard.
 
 ---
 
-## Features
+## 🚀 Features
 
-### 🔌 USB‑C Overview
-- Detects partner device  
-- Shows PD support  
-- Displays voltage, current, wattage  
-
-### ⚡ Power Test (Live)
-- Live voltage/current/wattage  
-- Stability measurement  
-- 1‑second updates  
-
-### 💾 Data Speed Test
-- 4‑run averaged read/write test  
-- Auto‑detects USB drives  
-
-### 🔥 Stability Test
-- 10‑run stress test  
-- Detects throttling, link drops, instability  
-- Generates a stability score (0–100)  
-
-### 🧬 Cable Identity (E‑Marker)
-- Reads cable identity if exposed by firmware  
-- Detects active/passive cables  
-- Shows speed rating, current rating, manufacturer info  
-- Handles cases where firmware hides identity  
-
-### 🛠 Raw USB/PD Data
-- Dumps `/sys/class/typec`  
-- Dumps `/sys/class/power_supply`  
-- Dumps `/sys/bus/usb/devices`  
-
-### 📄 Export Report
-- Generates a full `.txt` diagnostic report  
-- Includes all tests + raw data  
+### 🔌 USB‑C Port & Cable Detection
+SoftCable detects:
+- USB‑C port identity
+- Partner device
+- Power Delivery support
+- PD profiles
+- Voltage, current, and wattage
 
 ---
 
-## Installation
+### 🧠 Smart Diagnostics
+SoftCable includes:
+- Data speed testing (write/read)
+- Stability testing with variance scoring
+- Live power monitoring dashboard
+- USB‑C lane visualization (Phase 8)
+- Raw system data from `/sys/class/typec`
+- Cable identity & e‑marker decoding
+
+---
+
+## 🎨 Modern CustomTkinter GUI (v2.0.0)
+Version 2.0 introduces a complete UI overhaul:
+
+- Modern tabbed interface  
+- Dark/Light mode toggle  
+- Read‑only scrollable textboxes  
+- Clean vertical power dashboard  
+- Improved spacing and typography  
+- Consistent design with DistroMatch v2.0  
+
+Tabs include:
+- Overview  
+- Lanes  
+- Data Test  
+- Power Test  
+- Stability Test  
+- Raw Data  
+- Cable Identity  
+- Export  
+
+---
+
+## 📦 Installation
+
+Clone the repository:
 
 ```bash
-git clone https://github.com/TheOwn68/SoftCable.git
+git clone https://github.com/yourusername/SoftCable.git
 cd SoftCable
-pip install -r requirements.txt
-python3 main.py
